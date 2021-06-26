@@ -9,17 +9,21 @@ export default function Users() {
             .then(value => value.json())
             .then(value => {
                 setUsersList(value);
+
             });
 
-    });
+    },[]);
 
     return (
         <div>
             {
-                usersList.map(value => <div>{value.id} - {value.name}
-                <button>Click Me</button>
-                </div>)
+                usersList.map(value =>
+                    <div>
+                    <h2>{value.id}* {value.username} - {value.name}</h2>
+                    <div>{value.email}</div>
+                    </div>)
             }
         </div>
     );
 }
+
