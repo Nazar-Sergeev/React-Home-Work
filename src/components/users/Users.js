@@ -4,7 +4,7 @@ export default function Users({items, selectUser}) {
     return (
         <div>
             {
-                items.map(u=> <User item={u} selectUser={selectUser}/>)
+                items.map(u=> <User key={u.id} item={u} selectUser={selectUser}/>)
             }
         </div>
     );
