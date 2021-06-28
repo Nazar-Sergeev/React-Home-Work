@@ -17,7 +17,6 @@ function App() {
     }, []);
 
     function selectUser(id) {
-        console.log(id);
         getUser(id).then(value => setUserDetails(value.data))
 
     }
@@ -27,6 +26,7 @@ function App() {
             <Users items={users} selectUser={selectUser}/>
             <hr/>
             <UserDetails item={userDetails}/>
+            <hr/>
         </div>
     );
 }
