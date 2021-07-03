@@ -15,7 +15,7 @@ function reducer(state,action){
 
 function App() {
 
-    let [state, dispatch] = useReducer(reducer,{a: 0, b: 0})
+    let [state, dispatch] = useReducer(reducer, {a: 0, b: 0});
     console.log(state);
 
     return (
