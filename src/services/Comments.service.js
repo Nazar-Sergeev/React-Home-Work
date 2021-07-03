@@ -7,4 +7,4 @@ let axiosInstance = axios.create({
 let getComments = () => axiosInstance('');
 let getComment = (id) => axiosInstance('/' + id);
 
-export {getComments, getComment};
+export {getComments, getComment}

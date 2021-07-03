@@ -7,4 +7,4 @@ let axiosInstance = axios.create({
 let getUsers = () => axiosInstance('');
 let getUser = (id) => axiosInstance('/' + id);
 
-export {getUser, getUsers};
+export {getUser, getUsers}

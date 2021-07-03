@@ -12,8 +12,8 @@ export default function Posts() {
     return (
         <div>
             {
-                posts.map(value => <Post key={value.id} item = {value}/>)
+                posts.map(value => <Post key={value.id} item={value}/>)
             }
         </div>
     );
-}
+};
