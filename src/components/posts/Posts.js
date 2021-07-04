@@ -1,14 +1,23 @@
-import {useEffect} from "react";
-import {getUserPosts} from "../../services/API";
+import {useEffect, useState} from "react";
+import {getPosts} from "../../services/Posts.service";
+import Post from "../post/Post";
+import {Switch,Route} from 'react-router-dom';
+import PostDetails from "../details/PostDetails";
 
 export default function Posts() {
 
+    let [posts, setPosts] = useState([]);
     useEffect(() => {
-        getUserPosts().then(value => console.log(value.data))
+        getPosts().then(value => setPosts([...value.data]))
     }, []);
     return (
         <div>
-            Posts
+            {
+                posts.map(value => <Post key={value.id} item={value}/>)
+            }
+            <Switch>
+                <Route path={'/posts/:id'} component={PostDetails}/>
+            </Switch>
         </div>    
     );
 }

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../../services/API";
+import {getUsers} from "../../services/Users.service";
 import User from "../user/User";
 import {
     BrowserRouter as Router,

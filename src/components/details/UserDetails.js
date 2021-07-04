@@ -21,7 +21,7 @@
 
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from "react";
-import {getUser} from "../../services/API";
+import {getUser} from "../../services/Users.service";
 export default function UserDetails() {
     // let {match: {params: {id}}} = props;
     // console.log(id);
@@ -32,7 +32,7 @@ export default function UserDetails() {
     }, [id]);
     return (
         <div>
-            {user.id} - {user.username}
+            {user.id} - {user.username} - {user.email}
         </div>
     );
 }
