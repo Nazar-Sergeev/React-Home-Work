@@ -1,7 +1,13 @@
 import {useEffect, useState} from "react";
-import {getUser, getUsers} from "../../services/API";
+import {getUsers} from "../../services/API";
 import User from "../user/User";
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from 'react-router-dom';
+import UserDetails from "../details/UserDetails";
 export default function Users() {
 
     let [users, setUsers] = useState([]);
@@ -14,6 +20,10 @@ export default function Users() {
             {
                 users.map(value => <User key={value.id} item={value}/>)
             }
+            <Switch>
+                <Route path={'/users/:id'} component={UserDetails}/>
+
+            </Switch>
         </div>
     );
 }
