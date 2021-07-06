@@ -1,12 +1,7 @@
 import {useEffect, useState} from "react";
 import {getUsers} from "../../services/Users.service";
 import User from "../user/User";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from 'react-router-dom';
+import {Switch, Route,} from 'react-router-dom';
 import UserDetails from "../details/UserDetails";
 export default function Users() {
 
